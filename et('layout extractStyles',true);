@@ -1,0 +1,35 @@
+[33mcommit 96425ad290fdf7db8120d1f1cd8ae36dbb225b91[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Aryan Agrawal <45911109+Aaryan00@users.noreply.github.com>
+Date:   Thu May 7 20:12:17 2020 +0530
+
+    setup static file access for layout and pages
+
+[33mcommit e4e96b32bb38216bc9010fdb0327feee7c660e07[m
+Author: Aryan Agrawal <45911109+Aaryan00@users.noreply.github.com>
+Date:   Thu May 7 17:16:59 2020 +0530
+
+    this  will cover layout and user profile
+
+[33mcommit 9fa973736dbfe6978f81c9aafd0e413547150169[m
+Author: Aryan Agrawal <45911109+Aaryan00@users.noreply.github.com>
+Date:   Thu May 7 16:44:17 2020 +0530
+
+    Header and footer is added
+
+[33mcommit b62a21557a119e1d288f5ec4d6582d1ea100fae2[m
+Author: Aryan Agrawal <45911109+Aaryan00@users.noreply.github.com>
+Date:   Thu May 7 14:39:04 2020 +0530
+
+    view engine get set up
+
+[33mcommit 6b645610a2e0f5f313a4d73b8f9d38caaae6631a[m
+Author: Aryan Agrawal <45911109+Aaryan00@users.noreply.github.com>
+Date:   Thu May 7 14:04:56 2020 +0530
+
+    add a controller and a router for home
+
+[33mcommit 7bc6a37cfbee58ee2d369f8ccbe5e8618c9bdedd[m
+Author: Aryan Agrawal <45911109+Aaryan00@users.noreply.github.com>
+Date:   Wed May 6 20:46:53 2020 +0530
+
+    First Commit : create the directory structure and get the express server
