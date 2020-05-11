@@ -1,0 +1,12 @@
+header {
+  background-color: lightblue; }
+
+#heading {
+  color: #f35f09;
+  padding: 15px;
+  height: 20px; }
+
+#sign {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
