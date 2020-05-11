@@ -1,28 +1,35 @@
-<header>
-    <div id="heading">
-        ChaseBook
-    </div>
-    <div id="sign">
-    <ul>
-        <% if (locals.user){ %>
-             <li>
-                <a href="/users/profile">
-                 <%= user.name %>
-                </a> 
-             <li>
-                 <a href="/users/sign-out">Sign out</a>
-             </li>
+<header id="layout-header">
+    <nav>
+        <div class="mini-logo">
+            <p>
+                <a href="/">
+                     ChaseBook
+                </a>
+            </p>
+        </div>
 
-        <%}else{%>
+    <div class="auth-links">
+          <ul>
+            <% if (locals.user){ %>
+                <li>
+                    <a href="/users/profile">
+                    <%= user.name %>
+                    </a> 
+                <li>
+                    <a href="/users/sign-out">Sign out</a>
+                </li>
 
-            <li>
-                <a href="/users/sign-in">Sign-in</a>
-            </li>
+            <%}else{%>
 
-            <li>
-                <a href="/users/sign-up">Sign-up</a>
-            </li>
-        <%}%>
-    </ul>
-</div>
+                <li>
+                    <a href="/users/sign-in">Sign-in</a>
+                </li>
+
+                <li>
+                    <a href="/users/sign-up">Sign-up</a>
+                </li>
+            <%}%>
+          </ul>
+        </div>
+    </nav>
 </header>
