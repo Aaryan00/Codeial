@@ -21,12 +21,20 @@
             <% for(post of posts){ %>
                 <li>
                     <p>
+                        <!--  delete button will only show to user who created post -->
+                        <% if(locals.user && locals.user.id == post.user.id){ %>
+                        <small>
+                            <a href="/posts/destroy/<%= post.id %>">x</a>
+                        </small>
+                        <% } %>
                         <%= post.content %>
                         <small>
                             <%= post.user.name%>
                         </small>
                     </p>
                     <div class="post-comments">
+
+                        <!-- show the comment form if user is logged in -->
                         <% if(locals.user){%>
                             <form action="/comments/create" method="POST">
                                 <input type="text" name="content" placeholder="Type here to add comment..."required>
