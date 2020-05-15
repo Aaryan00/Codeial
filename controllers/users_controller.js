@@ -50,19 +50,26 @@ module.exports.signIn = function(req, res){
 // get the sign up data
 module.exports.create = function(req, res){
     if (req.body.password != req.body.confirm_password){
+        req.flash('error',"password and confirm password should be same");
         return res.redirect('back');
     }
 
     User.findOne({email: req.body.email}, function(err, user){
-        if(err){console.log('error in finding user in signing up'); return}
+        if(err){
+            // console.log('error in finding user in signing up');
+            req.flash('error',err);
+             return res.redirect('back');
+            }
 
         if (!user){
             User.create(req.body, function(err, user){
                 if(err){console.log('error in creating user while signing up'); return}
 
+                req.flash('success','Congrats!! Account Created')
                 return res.redirect('/users/sign-in');
             })
         }else{
+            req.flash('error','Error in creating Accoount');
             return res.redirect('back');
         }
 
