@@ -1,12 +1,12 @@
-<li>
+<li id="comment-<%= comment._id %>">
     <p>
 <!--  delete button will only show to user who created comment and in whom post the comment is done -->
         <% if((locals.user && locals.user.id == comment.user.id)||(locals.user && locals.user.id == post.user.id)){ %>
        <small>
-            <a href="/comments/destroy/<%= comment.id %>">x</a>
+            <a class= "delete-comment-button" href="/comments/destroy/<%= comment.id %>">x</a>
         </small>
          <% } %>
-           <%= comment.content %>
+        <%= comment.content %>
         <br>
         <small>
             <%= comment.user.name %>
