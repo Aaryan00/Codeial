@@ -17,7 +17,7 @@
 
                         new Noty({
                             theme: 'relax',
-                            text: "Post created",
+                            text: "Post created using ajax",
                             type: 'success',
                             layout: 'topRight',
                             timeout: 1500
@@ -68,6 +68,7 @@
     }
 
 // method to delete post from dom
+
     let deletePost = function(deleteLink){
         $(deleteLink).click(function(e){
             e.preventDefault();
@@ -80,7 +81,7 @@
 
                     new Noty({
                         theme: 'relax',
-                        text: "Post Deleted",
+                        text: "Post Deleted using ajax",
                         type: 'success',
                         layout: 'topRight',
                         timeout: 1500

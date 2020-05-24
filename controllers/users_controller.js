@@ -28,12 +28,14 @@ module.exports.update = async function(req,res){
                 if(err){
                     console.log('***** MUlter Error',err)
                 }
-                // console.log(req.file);
+
+                
                 user.name = req.body.name;
                 user.email = req.body.email;
+                user.password = req.body.password;
 
                 if(req.file){
-
+                    // deleting the old photo from storage
                     if(user.avatar){
                         fs.unlinkSync(path.join(__dirname, '..', user.avatar));
                     }
@@ -41,6 +43,7 @@ module.exports.update = async function(req,res){
                     //this is saving the path of the uploaded file into the avatar field in the user
                     user.avatar = User.avatarPath + '/' + req.file.filename
                 }
+                
                 user.save();
                 return res.redirect('back');
             });

@@ -38,7 +38,7 @@ class PostComments{
 
                     new Noty({
                         theme: 'relax',
-                        text: "Comment published!",
+                        text: "Comment published using ajax!",
                         type: 'success',
                         layout: 'topRight',
                         timeout: 1500
@@ -87,7 +87,7 @@ class PostComments{
 
                     new Noty({
                         theme: 'relax',
-                        text: "Comment Deleted",
+                        text: "Comment Deleted using ajax",
                         type: 'success',
                         layout: 'topRight',
                         timeout: 1500
