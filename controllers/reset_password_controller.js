@@ -22,7 +22,7 @@ module.exports.maketoken = async function(req,res){
                 let token = await AccessToken.create({
                     user: user._id,
                     Token: CryptoToken,
-                    valid: true
+                    valid: 1
                 });
                 
                     token = await token.populate('user', 'name email').execPopulate();
@@ -66,7 +66,7 @@ module.exports.confirmchanging = function(req,res){
     try{
         AccessToken.findOne({Token: req.params.accesstoken}, function(err,token){
   
-            token.valid= false,
+            token.valid= 0,
             User.findById(token.user,function(err,user){
 
                 user.password = req.body.password;

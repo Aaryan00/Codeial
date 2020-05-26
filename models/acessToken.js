@@ -11,7 +11,7 @@ const acessTokenSchema = new mongoose.Schema({
     },
 
     valid: {
-        type: Boolean
+        type: Number
     }
 },{
     timestamps: true
