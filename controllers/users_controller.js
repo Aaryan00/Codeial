@@ -1,6 +1,8 @@
 const User = require('../models/user');
+const AccessToken = require('../models/acessToken');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 module.exports.profile = function(req, res){
     User.findById(req.params.id,function(err,user){
@@ -101,6 +103,7 @@ module.exports.create = function(req, res){
 
         if (!user){
             User.create(req.body, function(err, user){
+                // console.log(req.body);
                 if(err){console.log('error in creating user while signing up'); return}
 
                 req.flash('success','Congrats!! Account Created')
